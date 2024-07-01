@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utec.gestorApp.evento.EventoOpcionesController">
+    <center>
+        <VBox alignment="CENTER" spacing="10">
+            <Label fx:id="eventoNombreLabel" text="Opciones del Evento" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+            <Label text="Usuarios Inscriptos" style="-fx-font-size: 16px;"/>
+            <TableView fx:id="usuariosInscriptosTableView">
+                <columns>
+                    <TableColumn fx:id="InscriptedusernameColumn" text="Username" prefWidth="150"/>
+                    <TableColumn fx:id="InscriptedcedulaColumn" text="Cedula" prefWidth="100"/>
+                    <TableColumn fx:id="InscriptedemailColumn" text="Email" prefWidth="150"/>
+                    <TableColumn fx:id="InscripteddepartamentoColumn" text="Departamento" prefWidth="100"/>
+                    <TableColumn fx:id="InscriptedsemestreColumn" text="Semestre" prefWidth="100"/>
+                    <TableColumn fx:id="InscriptedasistioColumn" text="Asistió" prefWidth="75"/>
+                </columns>
+            </TableView>
+
+            <Label text="Todos los Usuarios" style="-fx-font-size: 16px;"/>
+            <ScrollPane fitToWidth="true">
+                <TableView fx:id="todosUsuariosTableView" editable="true">
+                    <columns>
+                        <TableColumn fx:id="usernameColumn" text="Username" prefWidth="150"/>
+                        <TableColumn fx:id="cedulaColumn" text="Cedula" prefWidth="100"/>
+                        <TableColumn fx:id="emailColumn" text="Email" prefWidth="150"/>
+                        <TableColumn fx:id="departamentoColumn" text="Departamento" prefWidth="100"/>
+                        <TableColumn fx:id="semestreColumn" text="Semestre" prefWidth="100"/>
+                        <TableColumn fx:id="isInscriptedColumn" text="Inscrito" prefWidth="75"/>
+                    </columns>
+                </TableView>
+            </ScrollPane>
+
+            <Button fx:id="agregarUsuarioButton" text="Agregar Usuario" />
+            <Button fx:id="backButton" text="Volver" />
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

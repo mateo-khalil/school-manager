@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="utec.gestorApp.ui.AnalistaControllerFx">
+    <top>
+        <VBox spacing="10" alignment="CENTER">
+            <Label text="Lista de Usuarios" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+        </VBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true">
+            <TableView fx:id="usuariosTable" editable="true">
+                <columns>
+                    <TableColumn fx:id="usernameColumn" text="Username" prefWidth="150"/>
+                    <TableColumn fx:id="cedulaColumn" text="Cedula" prefWidth="100"/>
+                    <TableColumn fx:id="fechaNacimientoColumn" text="Fecha Nacimiento" prefWidth="150"/>
+                    <TableColumn fx:id="telefonoColumn" text="Telefono" prefWidth="100"/>
+                    <TableColumn fx:id="emailColumn" text="Email" prefWidth="150"/>
+                    <TableColumn fx:id="departamentoColumn" text="Departamento" prefWidth="100"/>
+                    <TableColumn fx:id="localidadColumn" text="Localidad" prefWidth="100"/>
+                    <TableColumn fx:id="generacionColumn" text="Generacion" prefWidth="100"/>
+                    <TableColumn fx:id="semestreColumn" text="Semestre" prefWidth="100"/>
+                    <TableColumn fx:id="itrColumn" text="ITR" prefWidth="100"/>
+                    <TableColumn fx:id="activoColumn" text="Activo" prefWidth="75"/>
+                    <TableColumn fx:id="areaColumn" text="Area" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </ScrollPane>
+    </center>
+    <bottom>
+        <VBox spacing="10" alignment="CENTER">
+            <Button text="Volver al Dashboard" onAction="#openDashboardView"/>
+        </VBox>
+    </bottom>
+</BorderPane>
